@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="portfolio">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Christian Heyd | UX Designer</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles/main.css">
+
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+    <a href="#navbarNav" class="sr-only sr-only-focusable">Skip to main navigation</a>
+    <a href="#about" class="sr-only sr-only-focusable">Skip to main content</a>
+    <nav class="navbar sticky-top navbar-toggleable-md d-flex navbar-light bg-faded">
+        <button class="align-self-center navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">menu</button>
+        <a class="navbar-brand" href="#">Christian Heyd <small>UX Design & Front End Development</small></a>
+        <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
+            <ul class="navbar-nav d-flex p-lg-4 p-md-1" id="mainNavigation">
+                <li ng-class="{active: $route.current.activeLink == 'about'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
+                    <a class="nav-link home" href="#about">About</a>
+                </li>
+                <li ng-class="{active: $route.current.activeLink == 'process'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
+                    <a class="nav-link process" href="#process">Process</a>
+                </li>
+                <li ng-class="{active: $route.current.activeLink == 'resume'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
+                    <a class="nav-link resume" href="#resume">Resume</a>
+                </li>
+                <li ng-class="{active: $route.current.activeLink == 'contact'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
+                    <a class="nav-link contact" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+  <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+    <div ng-view class="container" id="mainContent" autoscroll="true">
+
+
+    </div>
+    
+  </div>
+    <footer ng-class="{fixed: $route.current.activeLink === 'about' || $route.current.activeLink === 'contact'}">
+        <div class="container">
+            <div class="row">
+                <div ng-hide="$route.current.activeLink === 'contact'" class="col-12 col-sm-4 col-md-4 col-lg-4">
+                    <h3>Want to chat?</h3>
+                    <p>I'm currently employed full time, but am happy to consider any new projects. Please select an option from the Contact section to get in touch. I look forward to speaking with you!</p>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                    <h3>Navigate</h3>
+                    <ul class="footer-links">
+                        <li ng-class="{active: $route.current.activeLink == 'about'}"><a href="#about">About</a></li>
+                        <li ng-class="{active: $route.current.activeLink == 'process'}"><a href="#process">Process</a></li>
+                        <li ng-class="{active: $route.current.activeLink == 'resume'}"><a href="#resume">Resume</a></li>
+                        <li ng-class="{active: $route.current.activeLink == 'contact'}"><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                    
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+  
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+
+</html>
