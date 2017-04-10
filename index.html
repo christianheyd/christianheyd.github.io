@@ -31,16 +31,16 @@
         <div class="collapse navbar-collapse justify-content-lg-end" id="navbarNav">
             <ul class="navbar-nav d-flex p-lg-4 p-md-1" id="mainNavigation">
                 <li ng-class="{active: $route.current.activeLink == 'about'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
-                    <a class="nav-link home" href="#about">About</a>
+                    <a class="nav-link home" ng-click="navigationClick('about')" href="#about">About</a>
                 </li>
                 <li ng-class="{active: $route.current.activeLink == 'process'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
-                    <a class="nav-link process" href="#process">Process</a>
+                    <a class="nav-link process" ng-click="navigationClick('process')" href="#process">Process</a>
                 </li>
                 <li ng-class="{active: $route.current.activeLink == 'resume'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
-                    <a class="nav-link resume" href="#resume">Resume</a>
+                    <a class="nav-link resume" ng-click="navigationClick('resume')" href="#resume">Resume</a>
                 </li>
                 <li ng-class="{active: $route.current.activeLink == 'contact'}" class="nav-item d-flex justify-content-center justify-content-sm-center">
-                    <a class="nav-link contact" href="#contact">Contact</a>
+                    <a class="nav-link contact" ng-click="navigationClick('contact')" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>

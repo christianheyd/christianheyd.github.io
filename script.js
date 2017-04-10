@@ -43,6 +43,11 @@
 	portfolio.controller('mainController', function($scope, $route, $location, $anchorScroll) {
         $scope.$route = $route;
 
+		$scope.navigationClick = function(goTo){
+			$('.collapse').collapse('hide');
+			skipLink(goto);
+		};
+
         $scope.skipLink = function(goTo) {
             $location.hash(goTo);
 
@@ -55,7 +60,10 @@
 	});
 
 	portfolio.controller('contactController', function($scope) {
-		
+		$scope.images = [
+			'assets/img/linkedin.svg',
+			'assets/img/contact_alt.svg'
+		]
 	});
 
     portfolio.controller('processController', function($scope) {
