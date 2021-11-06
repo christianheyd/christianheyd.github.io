@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <aside>
+    <div class="header">
+      <h2>Christian Heyd</h2>
+      <h3>Accessibility Engineer | UX Designer</h3>
+    </div>
+    <nav>
+      <ul>
+        <li><a routerLink="/about"
+             routerLinkActive="active">About</a></li>
+        <li><a routerLink="/work"
+             routerLinkActive="active">Work</a></li>
+        <li><a routerLink="/contact"
+             routerLinkActive="active">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+  <main tabindex="0">
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+</div>

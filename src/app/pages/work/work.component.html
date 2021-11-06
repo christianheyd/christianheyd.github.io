@@ -1,0 +1,13 @@
+<section *ngFor="let work of workList"
+         @list>
+  <h1>{{work.job}} <small>{{work.dates}}</small></h1>
+  <ul>
+    <li *ngFor="let project of work.projects"
+        @items>
+      <div class="wrapper">
+        <h2>{{project.name}}</h2>
+        <p>{{project.description}}</p>
+      </div>
+    </li>
+  </ul>
+</section>
