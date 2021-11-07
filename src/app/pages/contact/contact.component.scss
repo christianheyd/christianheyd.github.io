@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 8px;
+  margin: 32px 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--body-text-color);
+    border: 2px solid var(--body-text-color);
+    border-radius: 4px;
+    height: 48px;
+    font-size: 1.675rem;
+    text-decoration: none;
+
+    i {
+      margin-right: 8px;
+    }
+  }
+}
+
+:host {
+  width: 100%;
+}

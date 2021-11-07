@@ -1,0 +1,138 @@
+@import 'media-queries';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+
+  @include media-md {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 1fr;
+  }
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  background: var(--aside-background);
+  z-index: 2;
+
+  @include media-md {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+
+  .header {
+    h2, h3 {
+      font-weight: normal;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+
+      @include media-md {
+        margin-bottom: 0;
+      }
+    }
+
+    h3 {
+      font-size: 0.8125rem;
+    }
+
+    @include media-md {
+      display: inline-flex;
+      margin-right: auto;
+      flex: 1 1 0px;
+      padding-left: 4px;
+      height: auto;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+
+  nav {
+    @include media-md {
+      display: inline-flex;
+      flex: 1 1 0px;
+    }
+
+    ul {
+      margin-top: 32px;
+      padding-left: 0;
+
+      @include media-md {
+        margin-top: 8px;
+        margin-right: 8px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        display: flex;
+        justify-content: space-between;
+        flex: 1 1 0;
+        align-items: center;
+      }
+      li {
+        list-style: none;
+
+        &:not(:last-of-type) {
+          margin-bottom: 48px;
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--body-text-color);
+
+          &.active {
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+
+        @include media-md {
+          display: inline-block;
+
+          &:not(:last-of-type) {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    margin-top: auto;
+
+    @include media-md {
+      display: none;
+    }
+  }
+}
+
+main {
+  position: relative;
+  padding: 24px 36px;
+  margin: 2px;
+  border: 2px solid transparent;
+  overflow: hidden auto;
+  max-height: 100%;
+  z-index: 1;
+
+  &:focus {
+    border-color: var(--focus-outline-color);
+    border-radius: 4px;
+  }
+
+  @include media-md {
+    padding: 12px 18px;
+  }
+
+  @include media-sm {
+    padding: 12px 8px;
+  }
+}

@@ -1,0 +1,121 @@
+@import 'media-queries';
+
+@mixin sizing {
+  @include media-md {
+    width: 75%;
+  }
+
+  @include media-sm {
+    width: 86%;
+  }
+}
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  section {
+    width: 66.6%;
+    margin: 0 auto;
+
+    &:not(:first-of-type) {
+      margin-top: 52px;
+    }
+
+    @include sizing;
+  }
+
+  h1 {
+    font-weight: bold;
+    margin-bottom: 16px;
+
+    small {
+      font-size: 1.675rem;
+      font-weight: normal;
+
+      @include media-md {
+        display: block;
+      }
+    }
+  }
+
+  ul.position-list {
+    padding-left: 0;
+    margin: 0;
+
+    >li {
+      position: relative;
+      list-style: none;
+      padding: 0 0 8px 24px;
+      display: flex;
+      align-items: center;
+      border-left: 2px solid var(--body-text-color);
+
+      &:first-of-type {
+        border-top-left-radius: 8px;
+      }
+
+      &:last-of-type {
+        padding-bottom: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      &:before {
+        display: inline-block;
+        content: "";
+        height: 24px;
+        width: 24px;
+        border-radius: 50%;
+        background: var(--body-text-color);
+        position: absolute;
+        left: -13px;
+        margin-bottom: -4px;
+      }
+
+      .wrapper {
+        display: inline-block;
+
+        h2 {
+          font-size: 1.5rem;
+          font-weight: bold;
+
+          small {
+            font-size: 1rem;
+            font-weight: normal;
+          }
+        }
+
+        p.tools {
+          font-size: 1rem;
+          margin: 0;
+        }
+
+        .position-details {
+          margin-top: 8px;
+
+          li {
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+
+    }
+  }
+
+  .download {
+    width: 66.6%;
+    @include sizing;
+    margin-top: 36px;
+    background: transparent;
+    border: 3px solid var(--body-text-color);
+    border-radius: 4px;
+    color: var(--body-text-color);
+    font-size: 1.5rem;
+    padding: 8px 0;
+    text-align: center;
+    text-decoration: none;
+  }
+}
