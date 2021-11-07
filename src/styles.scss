@@ -11,16 +11,46 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 :root {
---body-background: #232323;
---body-text-color: #979696;
---aside-background: #1C1C1C;
---focus-outline-color: white;
+--body-background: #242424;
+--body-text-color: #fff;
+--aside-background: #525252;
+--focus-outline-color: #fff;
 }
 
-// :root.red {
-  // --body-background: red;
-  // for themes, use .themeName on <html>
-// }
+:root.lewis {
+  --body-background: #4b3f68;
+  --body-text-color: #fff;
+  --aside-background: #544475;
+  --focus-outline-color: #fff;
+}
+
+:root.mclaren {
+  --body-background: #fda83f;
+  --body-text-color: #000;
+  --aside-background: #e49533;
+  --focus-outline-color: #000;
+}
+
+:root.merc {
+  --body-background: #33ab9c;
+  --body-text-color: #000;
+  --aside-background: #2cb7a7;
+  --focus-outline-color: #000;
+}
+
+:root.ferrari {
+  --body-background: #a1331d;
+  --body-text-color: #fff;
+  --aside-background: #dd3112;
+  --focus-outline-color: #fff;
+}
+
+:root.red-bull {
+  --body-background: #13374b;
+  --body-text-color: #fff;
+  --aside-background: #074d6d;
+  --focus-outline-color: #fff;
+}
 
 html {
   font-size: 16px;
@@ -56,7 +86,7 @@ body {
 
 // Font Sizing
 h1 {
-  font-size: 3.25rem;
+  font-size: 2.25rem;
   font-weight: bold;
 }
 

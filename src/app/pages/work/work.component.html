@@ -1,13 +1,26 @@
-<section *ngFor="let work of workList"
+<section *ngFor="let job of resume"
          @list>
-  <h1>{{work.job}} <small>{{work.dates}}</small></h1>
-  <ul>
-    <li *ngFor="let project of work.projects"
+
+  <h1>{{job.employer}} <small>{{job.dates}}</small></h1>
+
+  <ul class="position-list">
+    <li *ngFor="let position of job.position"
         @items>
       <div class="wrapper">
-        <h2>{{project.name}}</h2>
-        <p>{{project.description}}</p>
+
+        <h2>{{position.name}} <small>{{position.dates}}</small></h2>
+        <p class="tools">{{position.tools}}</p>
+        <ul class="position-details">
+          <li *ngFor="let bullet of position.bullets">{{bullet}}</li>
+        </ul>
+
       </div>
     </li>
   </ul>
 </section>
+
+<a download
+   href="assets/christian_heyd_resume.docx"
+   class="download">
+  Download Resume
+</a>

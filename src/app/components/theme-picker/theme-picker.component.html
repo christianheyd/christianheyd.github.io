@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <button *ngFor="let palette of paletteList"
+          [ngClass]="palette"
+          (click)="setTheme(palette)">
+    <span>{{palette}}</span>
+  </button>
+</div>

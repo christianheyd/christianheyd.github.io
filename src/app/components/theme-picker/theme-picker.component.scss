@@ -1,0 +1,54 @@
+@import 'media-queries';
+
+:host {
+  display: flex;
+  width: 100%;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px 0;
+
+    width: 100%;
+
+    button {
+      $size: 2rem;
+      width: $size;
+      height: $size;
+      border: 2px solid var(--body-text-color);
+      border-radius: 50%;
+      align-self: center;
+      justify-self: center;
+
+      span {
+        position: absolute;
+        left: -9999px;
+      }
+
+      &.default {
+        background: #242424;
+      }
+
+      &.mclaren {
+        background: #fea330;
+      }
+
+      &.ferrari {
+        background: #ff2800;
+      }
+
+      &.red-bull {
+        background: #004C6C;
+      }
+
+      &.lewis {
+        background: #4b3f68;
+      }
+
+      &.merc {
+        background: #00D2BE;
+      }
+    }
+  }
+
+}

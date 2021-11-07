@@ -13,12 +13,15 @@
 }
 
 aside {
-  background: var(--aside-background);
+  display: flex;
+  flex-direction: column;
   padding: 24px 16px;
+  background: var(--aside-background);
   z-index: 2;
 
   @include media-md {
     display: flex;
+    flex-direction: row;
     padding: 0;
   }
 
@@ -98,6 +101,15 @@ aside {
           }
         }
       }
+    }
+  }
+
+  footer {
+    display: flex;
+    margin-top: auto;
+
+    @include media-md {
+      display: none;
     }
   }
 }

@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { AboutComponent } from './pages/about/about.component';
 import { WorkComponent } from './pages/work/work.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ThemePickerComponent } from './components/theme-picker/theme-picker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
     WorkComponent,
-    ContactComponent
+    ContactComponent,
+    ThemePickerComponent
   ],
   imports: [
     AppRoutingModule,
