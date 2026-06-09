@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { fadeIn } from 'src/app/animations';
 
 @Component({
+  standalone: false,
   selector: 'article.about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],

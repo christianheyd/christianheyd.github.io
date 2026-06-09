@@ -1,8 +1,8 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
-import { inject } from '@angular/core/testing';
 
 @Component({
+  standalone: false,
   selector: '.theme-picker',
   templateUrl: './theme-picker.component.html',
   styleUrls: ['./theme-picker.component.scss']
@@ -24,7 +24,6 @@ export class ThemePickerComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.document);
   }
 
   setTheme(theme: string): void {

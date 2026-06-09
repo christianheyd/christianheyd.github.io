@@ -1,5 +1,5 @@
-@import 'normalize';
-@import 'media-queries';
+@use 'normalize' as *;
+@use 'media-queries' as *;
 
 @include normalize;
 
