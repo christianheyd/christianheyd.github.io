@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { itemsFadeIn, listFadeIn } from 'src/app/animations';
 
 @Component({
+  standalone: false,
   selector: 'article.work',
   templateUrl: './work.component.html',
   styleUrls: ['./work.component.scss'],

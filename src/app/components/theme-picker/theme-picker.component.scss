@@ -1,4 +1,4 @@
-@import 'media-queries';
+@use 'media-queries' as *;
 
 :host {
   display: flex;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { fadeIn } from 'src/app/animations';
 
 @Component({
+  standalone: false,
   selector: 'article.contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
